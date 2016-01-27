@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>slider</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="js/jquery.cycle.lite.js"></script>
+</head>
+<body>
+	<div id="slider-wrap">
+	    <div id="slider">
+	        <div style="opacity:1;" class="one slide"><img src="img/man.jpg"></div>
+	        <div class="two slide"><img src="img/min.jpg"></div>
+	        <div class="three slide"><img src="img/min2.jpg"></div>
+	        <div class="four slide"><img src="img/pop.jpg"></div>
+	        <div class="five slide"><img src="img/world.jpg"></div>
+	    </div>
+	    <form>
+	    	<label class="my-custom-label">
+			    <input  class="btn" checked name="test" type="radio" />
+			    <span id="one"></span>
+			</label> 
+			<label class="my-custom-label">
+			    <input  class="btn" name="test" type="radio" />
+			    <span id="two"></span>
+			</label>
+			<label class="my-custom-label">
+			    <input  class="btn" name="test" type="radio" />
+			    <span id="three"></span>
+			</label>
+			<label class="my-custom-label">
+			    <input  class="btn" name="test" type="radio" />
+			    <span id="four"></span>
+			</label>
+			<label class="my-custom-label">
+			    <input  class="btn" name="test" type="radio" />
+			    <span id="five"></span>
+			</label>
+	    </form>
+	</div>
+	<script type="text/javascript">
+			$("#slider").cycle({ 
+			    fx:     'fade' , 
+			    speed:   300, 
+			    timeout: 3000, 
+			    pager:   '', 
+			    pause:   1 
+			});
+			$("#one").on("click" , function(){
+				$(".one").css("opacity" , "1");
+				$(".two").css("opacity" , "");
+				$(".three").css("opacity" , "");
+				$(".four").css("opacity" , "");
+				$(".five").css("opacity" , "");
+			});
+			$("#two").on("click" , function(){
+				$(".two").css("opacity" , "1");
+				$(".one").css("opacity" , "");
+				$(".three").css("opacity" , "");
+				$(".four").css("opacity" , "");
+				$(".five").css("opacity" , "");
+			});
+			$("#three").on("click" , function(){
+				$(".two").css("opacity" , "");
+				$(".one").css("opacity" , "");
+				$(".three").css("opacity" , "1");
+				$(".four").css("opacity" , "");
+				$(".five").css("opacity" , "");
+			});
+			$("#four").on("click" , function(){
+				$(".two").css("opacity" , "");
+				$(".one").css("opacity" , "");
+				$(".three").css("opacity" , "");
+				$(".four").css("opacity" , "1");
+				$(".five").css("opacity" , "");
+			});
+			$("#five").on("click" , function(){
+				$(".two").css("opacity" , "");
+				$(".one").css("opacity" , "");
+				$(".three").css("opacity" , "");
+				$(".four").css("opacity" , "");
+				$(".five").css("opacity" , "1");
+			});
+	</script>
+</body>
+</html>

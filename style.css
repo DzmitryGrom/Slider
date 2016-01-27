@@ -1,0 +1,60 @@
+html,body{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	height: 100%;
+}
+li{
+	list-style: none;
+	display: inline-block;
+}
+img{
+	width: 640px;
+	height: 360px;
+}
+form{
+	text-align: center;
+	margin-top: 20px;
+}
+#slider-wrap{
+	width: 640px;
+	margin: 0 auto;
+}
+#slider {
+	margin-top: 50px;
+    width: 640px;
+    height: 360px;
+    overflow: hidden;
+    border: #eee solid 10px;
+    position: relative;
+}
+.slide{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: 3s;
+}
+
+label{
+	margin-right: 10px;
+}
+.my-custom-label > input[type=radio] {
+    display: none;
+}
+
+.my-custom-label > span {
+    background: black;
+    border: solid 4px black;
+    display:inline-block;
+    width:10px;
+    height: 10px;
+    border-radius: 100%;
+    vertical-align:middle;
+}
+
+.my-custom-label > input[type=radio]:checked + span {
+    background: white;
+}
